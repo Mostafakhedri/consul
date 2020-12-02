@@ -44,7 +44,8 @@ export default class InstanceRoute extends Route {
           // Proxies have identical dc/nspace as their parent instance
           // No need to use Proxy's dc/nspace response
           proxy: this.data.source(
-            uri => uri`/${nspace}/${dc}/service-instance/${proxy.id}/${proxy.node}/${proxy.name}`
+            uri =>
+              uri`/${nspace}/${dc}/proxy-service-instance/${proxy.id}/${proxy.node}/${proxy.name}`
           ),
         });
       });
